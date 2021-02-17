@@ -11,20 +11,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-/* sql to create table
-$sql = "CREATE TABLE bank (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(30) NOT NULL,
-email VARCHAR(50),
-balance INT(9)
-)";
-
-if ($conn->query($sql) === TRUE) {
-  echo "Table bank created successfully";
-} else {
-  echo "Error creating table: " . $conn->error;
-}
-*/
 //records
 $sql = "SELECT * FROM bank "; 
 $result = $conn->query($sql); 
